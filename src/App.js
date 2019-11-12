@@ -76,18 +76,18 @@ class App extends React.Component {
     if (this.state.count === 20) {
       console.log("end game.");
       if (this.state.score > 15) {
-        this.setState({winLose: "You scored " + this.state.score + " out of 20." + " You really know your Trek!"});
+        this.setState({winLose: `You scored ${this.state.score} out of 20. You really know your Trek!`});
       }
       else if (this.state.score > 10 && this.state.score <= 15) {
-        this.setState({winLose: "You scored " + this.state.score + " out of 20." + " Not bad, not bad at all."});
+        this.setState({winLose: `You scored ${this.state.score} out of 20. Not bad, not bad at all.`});
       }
       else if (this.state.score > 5 && this.state.score <= 10) {
-        this.setState({winLose: "You scored " + this.state.score + " out of 20." + " Might wanna go back and watch some episodes."});
+        this.setState({winLose: `You scored ${this.state.score} out of 20. Might wanna go back and watch some episodes.`});
       }
       else if (this.state.score <= 5) {
-        this.setState({winLose: "You scored " + this.state.score + " out of 20." + " This isn't Star Wars."});
+        this.setState({winLose: `You scored ${this.state.score} out of 20. This isn't Star Wars.`});
       }
-      
+      this.setState({quiz: []});
     }
   }
 
@@ -99,7 +99,7 @@ class App extends React.Component {
         <h4>Question {this.state.count}</h4>
         <div id="question-zone">{this.state.quiz.question}</div>
         <Quiz getDataFromAPI={this.getDataFromAPI} quiz={this.state.quiz} handleClick={this.handleClick} handleChecked={this.handleChecked} />
-        <h1>{this.state.winLose}</h1>
+        <h2>{this.state.winLose}</h2>
       </div>
     )
   }

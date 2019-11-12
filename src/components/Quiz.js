@@ -19,7 +19,8 @@ const Quiz = (props) => {
       			<span className="check-label">C.</span> <Radio name="radios" checked={selectedValue === 'c'} onChange={props.handleChecked} value="c" inputProps={{ 'aria-label': 'C' }} onClick={handleSelected}/>
       			<span className="check-label">D.</span> <Radio name="radios" checked={selectedValue === 'd'} onChange={props.handleChecked} value="d" inputProps={{ 'aria-label': 'D' }} onClick={handleSelected}/>
 			</div>
-			 <Button size="large" className="submit-btn" onClick={props.handleClick}>
+			<br/>
+			 <Button variant="outlined" size="large" className="submit-btn" onClick={props.handleClick}>
           submit
         </Button>
 		</div>

@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nova+Flat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
 body {
 	font-family: 'Aldrich', sans-serif;
+	background: rgb(120,113,255);
+background: linear-gradient(90deg, rgba(120,113,255,1) 0%, rgba(141,242,254,0.9668242296918768) 0%, rgba(215,255,219,1) 1%, rgba(17,125,143,1) 100%, rgba(141,225,242,1) 100%);
 }
 
 .App {
@@ -13,6 +17,9 @@ body {
 }
 
 #header-font {
-	font-family: 'Aldrich', sans-serif;
+	font-family: 'Russo One', sans-serif;
+	opacity: 0.8;
+
 }
+
 
