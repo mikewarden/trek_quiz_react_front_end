@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
+
+body {
+	font-family: 'Aldrich', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.check-label {
+	margin-left: 30px;
+}
+
+#header-font {
+	font-family: 'Aldrich', sans-serif;
+}
+
