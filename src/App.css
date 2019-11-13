@@ -25,3 +25,7 @@ background: linear-gradient(90deg, rgba(120,113,255,1) 0%, rgba(141,242,254,0.96
 	margin-left: 5px;
 	margin-right: 5px;
 }
+
+h2 {
+	padding: 15px;
+}

@@ -104,7 +104,7 @@ class App extends React.Component {
       randLink: 30
     });
 
-    if (this.state.count < 20) {
+    if (this.state.count < 21) {
     this.getDataFromAPI();
   }
   }
@@ -114,7 +114,7 @@ class App extends React.Component {
     let count = `Question ${this.state.count}`;
 
 
-    if (this.state.count > 20) {
+    if (this.state.count >= 21) {
       questionZone = "End of Quiz, Press Reset to try again.";
       count = "";
     }
