@@ -91,14 +91,41 @@ class App extends React.Component {
     }
   }
 
+  handleReset = () => {
+    console.log("reset");
+    this.setState({
+      score: 0,
+      selected: "",
+      answer: "c",
+      quiz: [],
+      winLose: "",
+      count: 1,
+      randArray: [],
+      randLink: 30
+    });
+
+    if (this.state.count < 20) {
+    this.getDataFromAPI();
+  }
+  }
+
   render() { 
+    let questionZone = this.state.quiz.question;
+    let count = `Question ${this.state.count}`;
+
+
+    if (this.state.count > 20) {
+      questionZone = "End of Quiz, Press Reset to try again.";
+      count = "";
+    }
+
     return (
       <div id="main-container" className="App">
         <h1 id="header-font">Star Trek Quiz</h1>
         <h4>Test your knowledge!</h4>
-        <h4>Question {this.state.count}</h4>
-        <div id="question-zone">{this.state.quiz.question}</div>
-        <Quiz getDataFromAPI={this.getDataFromAPI} quiz={this.state.quiz} handleClick={this.handleClick} handleChecked={this.handleChecked} />
+        <h4>{count}</h4>
+        <div id="question-zone">{questionZone}</div>
+        <Quiz getDataFromAPI={this.getDataFromAPI} quiz={this.state.quiz} handleClick={this.handleClick} handleChecked={this.handleChecked} handleReset={this.handleReset}/>
         <h2>{this.state.winLose}</h2>
       </div>
     )
